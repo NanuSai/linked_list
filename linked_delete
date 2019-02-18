@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#include<string.h>
+
+struct node{
+
+int data;
+struct node* link	;
+};
+
+struct node* root=NULL;
+
+
+
+void append()
+{
+  
+  struct node* temp;
+  temp=(struct node*)malloc(sizeof(struct node));
+
+int n;
+while(1)
+{
+
+  printf("Press 3 to continue ");
+  scanf("%d",&n);
+
+  if(n==3)
+  {
+
+  printf("Enter your value: ");
+  scanf("%d",&temp->data);
+  temp->link=NULL;
+
+      if(root=NULL)
+      {
+        root=temp;
+        printf("%d\n",root->data);
+      }
+	  else
+	 {
+	  struct node* p=root;
+
+	  while(p->link!=NULL)
+	   p=p->link;
+	  
+
+	  p->link=temp;
+      printf("%d\n",temp->data);
+	}
+
+ }
+}
+}
+
+void delete(int loc)
+{
+  
+  int i;
+  struct node* p=root;
+  struct node* q;
+
+
+  for(int i=1;i<loc-1;i++)
+  {
+         p=p->link;
+  }
+
+  q=p->link;
+  p->link=q->link;
+  q->link=NULL;
+  
+  free(q);
+
+
+
+
+}
+
+
+
+int main()
+{
+	append();
+	
+	
+	return 0;
+}
