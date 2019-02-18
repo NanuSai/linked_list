@@ -1,0 +1,82 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node{
+    
+    int data;
+    struct node* link;
+    
+};
+
+void append(struct node* root)
+{
+    
+    struct node* temp;
+    temp=(struct node*)malloc(sizeof(struct node));
+   int n;
+while(1)
+{
+    
+    printf("Enter anything but 0 to continue: ");
+    scanf("%d",&n);
+    if(n!=0)
+    
+    {
+    
+    
+    printf("Enter the data: ");
+    scanf("%d",&temp->data);
+    temp->link=NULL;
+   
+   
+   
+   if(root==NULL)
+   {
+    root=temp;
+    printf("%d\n",temp->data);
+   }
+   else{
+       
+       struct node *p;
+       p=root;
+       while(p->link!=NULL)
+       p=p->link;
+           
+       
+       p->link=temp;
+       printf("%d\n",p->data);
+    
+         }
+        
+    }    
+    else
+    break;
+}
+    
+    
+  
+    
+    
+    
+    
+    
+    
+}
+
+int main()
+{ 
+    struct node* root=NULL;
+    
+    append(root);
+   
+    return 0;
+}
+
